@@ -3,151 +3,173 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <title>Pheun Phanith · modern animated portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Khmer&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..800&family=Kantumruy+Pro:wght@300..800&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Header -->
-    <header>
+    <!-- Hidden checkbox controls the theme (pure CSS toggle) -->
+    <input type="checkbox" id="theme-switch" class="theme-switch" />
+
+    <header class="site-header">
       <div class="container nav-wrapper">
-        <a class="brand" href="#hero">Pheun Phanith</a>
+        <a class="brand" href="#hero">
+          <span class="brand-dot"></span>
+          Pheun Phanith
+        </a>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skill</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+        <label for="theme-switch" class="theme-toggle" aria-label="Toggle dark mode">
+          <svg class="icon icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+          <svg class="icon icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+          </svg>
+        </label>
       </div>
     </header>
 
-    <!-- Hero section -->
     <div id="hero">
+      <div class="hero-glow"></div>
       <div class="container hero-grid">
         <div class="hero-text">
-          <span class="status-badge">I'm a student of Department ITE</span>
-          <h1 class="hero-title">I'm a student engineering</h1>
+          <span class="status-badge">
+            <span class="pulse"></span>
+            Student of Department ITE
+          </span>
+          <h1 class="hero-title">I'm a student<br />engineering</h1>
           <p class="hero-des">
-            I'm an engineering student passionate about technology and
-            continuous learning. My interests include Web Development, Mobile
-            Development, Artificial Intelligence & Machine Learning (AI/ML),
-            UX/UI Design, Computer Networks, Operating Systems, and English
-            language improvement.
+            Engineering student passionate about technology and continuous
+            learning. Web & mobile development, AI/ML, UX/UI design, networks,
+            and English.
           </p>
-
           <div class="hero-action">
-            <a class="btn-primary" href="">Get in Touch</a>
-            <a class="btn-secondary" href="">View Skill</a>
+            <a class="btn-primary" href="#contact">Get in Touch</a>
+            <a class="btn-secondary" href="#skills">View Skills</a>
           </div>
         </div>
         <div class="hero-image-wrap">
-          <img
-            class="profile-photo"
-            src="image/cat-profile.jpg"
-            alt="cat-profile"
-          />
+          <div class="photo-ring">
+            <img
+              class="profile-photo"
+              src="/image/cat-profile.jpg"
+              alt="Cat God"
+            />
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- About Section -->
     <section id="about">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
           <p class="section-label">Background</p>
           <h2 class="section-title">About Me</h2>
         </div>
-
-        <div class="about-content">
-          <p>
-            Junior Full Stack Developer specializing in Laravel, React PHP and
-            MySQL.
+        <div class="about-content reveal">
+          <p class="about-lead">
+            Junior Full Stack Developer · Laravel, React, PHP & MySQL
           </p>
           <p>
             I'm an Engineering Student and aspiring Full Stack Developer with
             experience in Laravel, React, PHP, and MySQL. I enjoy building web
             applications, learning new technologies, and solving problems
-            through programming. I'm also exploring AI/ML, improving my Data
-            Structures & Algorithms skills, and continuously growing as a
-            developer through projects and hands-on learning.
+            through programming. Also exploring AI/ML, improving DSA skills, and
+            growing through hands-on projects.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Skill Section -->
     <section id="skills">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
           <p class="section-label">My Skills</p>
           <h2 class="section-title">Core Skills</h2>
         </div>
         <div class="skills-layout">
-          <div class="skills-box">
+          <div class="skills-box reveal">
+            <div class="skills-num">01</div>
             <h3>Frontend Engineering</h3>
             <p>
-              Developing responsive and intuitive user interfaces with React,
-              JavaScript, HTML, and CSS, focusing on performance and user
-              experience.
+              Responsive, intuitive interfaces with React, JavaScript, HTML,
+              CSS — focus on performance and UX.
             </p>
+            <div class="tags">
+              <span>React</span><span>JS</span><span>CSS</span>
+            </div>
           </div>
-
-          <div class="skills-box">
+          <div class="skills-box reveal">
+            <div class="skills-num">02</div>
             <h3>Backend Engineering</h3>
             <p>
-              Building secure and scalable backend systems using PHP, Laravel,
-              and MySQL, with experience in RESTful APIs, authentication, and
-              database management.
+              Secure, scalable backends with PHP, Laravel, MySQL — REST APIs,
+              auth, database management.
             </p>
+            <div class="tags">
+              <span>PHP</span><span>Laravel</span><span>MySQL</span>
+            </div>
           </div>
-
-          <div class="skills-box">
-            <h3>AI/ML</h3>
+          <div class="skills-box reveal">
+            <div class="skills-num">03</div>
+            <h3>AI / ML</h3>
             <p>
-              Exploring Artificial Intelligence and Machine Learning concepts,
-              including data analysis, model development, and AI-powered
-              application integration.
+              Exploring AI & Machine Learning: data analysis, model
+              development, AI-powered integrations.
             </p>
+            <div class="tags">
+              <span>Python</span><span>Pandas</span><span>AI</span>
+            </div>
           </div>
-
-          <div class="skills-box">
+          <div class="skills-box reveal">
+            <div class="skills-num">04</div>
             <h3>Mobile Engineering</h3>
             <p>
-              Developing cross-platform mobile applications with Flutter,
-              focusing on responsive design, performance, and seamless user
-              experiences.
+              Cross-platform mobile apps with Flutter, responsive design,
+              performance and smooth UX.
             </p>
+            <div class="tags">
+              <span>Flutter</span><span>Dart</span><span>Mobile</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
           <p class="section-label">Connect</p>
           <h2 class="section-title">Let's work together</h2>
         </div>
-
-        <div class="contact-Card">
-          <div>
+        <div class="contact-card reveal">
+          <div class="contact-text">
             <h3>Have a project in mind?</h3>
             <p>
               I'm always excited to collaborate on web development projects,
               learn new technologies, and solve real-world problems. Whether
               it's a website, web application, or a creative idea, I'd love to
-              connect and explore how we can bring it to life together.
+              connect and bring it to life.
             </p>
           </div>
           <div class="contact-links">
-            <a class="contact-link" href="">Email</a>
-            <a class="contact-link" href="">GitHub</a>
-            <a class="contact-link" href="">Telegram</a>
+            <a class="contact-link" href="#">Email</a>
+            <a class="contact-link" href="#">GitHub</a>
+            <a class="contact-link" href="#">Telegram</a>
           </div>
         </div>
       </div>
@@ -155,8 +177,8 @@
 
     <footer>
       <div class="container footer-inner">
-        <p>&copy; 2026 Pheun Phanith</p>
-        <p>Build with HTML and CSS</p>
+        <p>© 2026 Pheun Phanith</p>
+        <p>Built with HTML & CSS · modern animation</p>
       </div>
     </footer>
   </body>
